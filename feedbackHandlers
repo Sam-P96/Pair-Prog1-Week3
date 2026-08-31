@@ -3,7 +3,8 @@ const Feedback = require("./feedbackLib");
 
 //getAllFeedbacks
 const getAllFeedbacks = (req, res) => {
-  res.json({ message: "Hello Sami" });
+    const feedback = Feedback.getAll();
+    res.json(feedback);
 };
 
 //createFeedback
