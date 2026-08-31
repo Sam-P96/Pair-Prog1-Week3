@@ -1,29 +1,21 @@
 const Feedback = require("./feedbackLib");
 
-
-//getAllFeedbacks
 const getAllFeedbacks = (req, res) => {
-    const feedback = Feedback.getAll();
-    res.json(feedback);
+  res.json({ message: "Hello from getAllFeedbacks" });
 };
 
-//createFeedback
 const createFeedback = (req, res) => {
   res.json({ message: "Hello from createFeedback" });
 };
 
-//getFeedbackById
 const getFeedbackById = (req, res) => {
   res.json({ message: "Hello from getFeedbackById" });
 };
 
-//updateFeedback
 const updateFeedback = (req, res) => {
   res.json({ message: "Hello from updateFeedback" });
 };
 
-
-//deleteFeedback
 const deleteFeedback = (req, res) => {
   res.json({ message: "Hello from deleteFeedback" });
 };
