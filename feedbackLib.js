@@ -38,13 +38,19 @@ function update(id, data) {
 }
 // deleteOne(id)
 function deleteOne(id) {
-    const feedback = findById(id)
-    if (feedback) {
-        const initialLength = feedbacks.length; 
-        feedbacks = feedbacks.filter((feedback => feedback.id !== Number(id)));
-        return feedback.length < initialLength;
-    }
-    return false;
+    const feedback = findById(id);
+
+  if (feedback) {
+    const initialLength = feedbacks.length;
+
+    feedbacks = feedbacks.filter(
+      (item) => item.id != id
+    );
+
+    return feedbacks.length < initialLength;
+  }
+
+  return false;
 }
   
 // getAll()
