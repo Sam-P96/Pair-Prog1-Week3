@@ -51,8 +51,6 @@ function deleteOne(id) {
     }
     return false;
 }
-
-//function deleteOne(id) {
     
 
 
