@@ -39,3 +39,14 @@ function findById(id) {
 //     }
 // }
 // deleteOne(id)
+
+if (require.main === module) {
+  const result = addOne(
+    "John Smith",
+    "Great session on React components!",
+    5,
+    "mobile"
+  );
+
+  console.log(result);
+}t
