@@ -81,4 +81,5 @@ if (require.main === module) {
 
     console.log("getAll called:", getAll());
     }
-
+Feedback = {getAll, findById, update, addOne, deleteOne};
+module.exports = Feedback;
