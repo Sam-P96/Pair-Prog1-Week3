@@ -23,6 +23,13 @@ const createFeedback = (req, res) => {
 };
 
 const getFeedbackById = (req, res) => {
+  const feedbackId = req.params.feedbackId;
+  const feedback = Feedback.findById(feedbackId);
+  if (feedback) {
+    res.json(feedback);
+  } else {
+    res.status(404).json({ message: "Feedback not found" });
+  }
   res.json({ message: "Hello from getFeedbackById" });
 };
 
