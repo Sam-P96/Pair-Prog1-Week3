@@ -1,0 +1,11 @@
+const Feedback = require("./feedbackLib");
+
+
+//getAllFeedbacks
+const getAllFeedbacks = (req, res) => {
+  res.json({ message: "Hello Sami" });
+};
+//createFeedback
+//getFeedbackById
+//updateFeedback
+//deleteFeedback
