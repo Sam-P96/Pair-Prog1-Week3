@@ -42,6 +42,16 @@ function update(id, data) {
     return false;
 }
 // deleteOne(id)
+function deleteOne(id) {
+    const feedback = findById(id)
+    if (feedback) {
+        const initialLength = feedbacks.length; 
+        feedbacks = feedbacks.filter((feedback => feedback.id !== Number(id)));
+        return feedback.length < initialLength;
+    }
+    return false;
+}
+
 //function deleteOne(id) {
     
 
@@ -58,4 +68,13 @@ if (require.main === module) {
   
   update(0, {message: "texting"})
   console.log(getAll())
+  addOne("John SmithX",
+    "Great sXXession on React components!",
+    55,
+    "mobileXX")
+    console.log("We made something")
+    console.log(getAll())
+    deleteOne(0)
+    console.log("WE JUST DELETED SOMETHING")
+    console.log(getAll())
 }
