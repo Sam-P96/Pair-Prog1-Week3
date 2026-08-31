@@ -30,15 +30,21 @@ function findById(id) {
 }
 
 // update(id, data)
-// function update(id, data) {
-//     const feedback = findById(id)
-//     if (feedback) {
-//         if (data) {
-//             feedback.
-//         }
-//     }
-// }
+function update(id, data) {
+    const feedback = findById(id)
+    if (feedback) {
+        if (data.sender) feedback.sender = data.sender;
+        if (data.message) feedback.message = data.message;
+        if (data.rating) feedback.rating = data.rating; 
+        if (data.platform) feedback.platform = data.platform; 
+        return feedback;      
+    }
+    return false;
+}
 // deleteOne(id)
+//function deleteOne(id) {
+    
+
 
 if (require.main === module) {
   const result = addOne(
@@ -49,4 +55,7 @@ if (require.main === module) {
   );
 
   console.log(result);
-}t
+  
+  update(0, {message: "texting"})
+  console.log(getAll())
+}
